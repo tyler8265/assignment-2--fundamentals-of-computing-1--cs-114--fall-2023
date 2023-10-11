@@ -78,8 +78,21 @@ public class Diamond {
         System.out.println();
       }
       //Code for Bottom Half Even
-      for (i = 0; i < downtoend)
+      numberofasteriks -= 1;
+      for (i = 0; i < downtoend; i++){
+        numberofasteriks -= 1;
+        for (j = 0; j < spaces + 1; j++)
+          System.out.print(" ");
+        spaces++;
+        row++;
+        for(as = 0; as < numberofasteriks; as++)
+          System.out.print(" *");
+        for (j = 0; j < spaces; j++){
+          System.out.print(" ");
+        }
+        System.out.println();
+      }
     }
-
+    scan.close();
   }
 }
