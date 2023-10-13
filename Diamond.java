@@ -58,6 +58,7 @@ public class Diamond {
         }
         System.out.println();
       }
+      System.out.println();
     }
     //Code for Even
     //Code for Top Half Even
@@ -82,15 +83,34 @@ public class Diamond {
           for (as = 0; as < numberOfAsteriks; as++)
             System.out.print(" *");
         }
-        for(j = 0; j < spaces; j++)
-          System.out.print(" ");
         numberOfAsteriks += 2;
         System.out.println();
       }
       //Code for Bottom
+      numberOfAsteriks -= 4;
+      spaces += 4;
       for (i = 0; i < countDown; i++){
-       
+        for (j = 0; j < spaces; j++)
+          System.out.print(" ");
+        row++;
+        if (row == input + 1){
+          spaces--;
+          System.out.print("    *");
+        }
+        else if(row == input){
+          spaces--;
+          System.out.print("  * *");
+        }
+        else{
+          spaces += 2;
+          System.out.print(" ");
+          for (as = 0; as < numberOfAsteriks; as++)
+            System.out.print(" *");
+        }
+        numberOfAsteriks -= 2;
+        System.out.println();
       }
+      System.out.println();
     scan.close();
   }
 }
